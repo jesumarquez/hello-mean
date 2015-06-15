@@ -28,3 +28,6 @@ node_modules
 
 #workspace directory
 workspace
+
+#bower dependencies
+bower_components

@@ -1,0 +1,26 @@
+{
+  "name": "hello-mean",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jesumarquez/hello-mean",
+  "authors": [
+    "Jesu Marquez <jesumarquez@gmail.com>"
+  ],
+  "description": "Mean stack demo",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "mean"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.0"
+  }
+}
