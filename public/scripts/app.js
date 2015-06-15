@@ -1,1 +1,1 @@
-var app = angular.module('meanApp',['meanApp.controllers']);
+var app = angular.module('meanApp',['meanApp.controllers', 'meanApp.services']);

@@ -1,17 +1,14 @@
 var app = angular.module('meanApp.controllers',[]);
 
-app.controller('customerController', ['$scope', 
-    function($scope){
+app.controller('customerController', ['$scope', 'customerService', 
+    function($scope, customerService){
 
-        $scope.customers = [
-            { firstName : 'Jesú', lastName : 'Márquez' },
-            { firstName : 'Benjamín', lastName : 'Márquez' }
-            ];
+        $scope.customers = customerService.list;
             
         $scope.current = {};
         
         $scope.add = function(){
-            $scope.customers.push($scope.current);
+            customerService.add($scope.current);
             $scope.current = {};
         };
     }
