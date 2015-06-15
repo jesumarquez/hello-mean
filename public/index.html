@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="meanApp">
     <body>
-        <h1>Just a Html file.</h1>
-        <div>
+        <h1>Simple angularjs sample.</h1>
+        <div ng-controller="customerController">
             <input type="text" ng-model="name" placehoder="Enter a name..."/>
             <h1>{{name}}</h1>
         </div>
+        <script type="text/javascript" src="/bower_components/angularjs/angular.min.js"></script>
+        <script type="text/javascript" src="/scripts/app.js"></script>
     </body>
-    <script type="text/javascript" src="/bower_components/angularjs/angular.min.js"></script>
-    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>-->
-    
 </html>
