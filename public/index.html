@@ -3,8 +3,14 @@
     <body>
         <h1>Simple angularjs sample.</h1>
         <div ng-controller="customerController">
-            <input type="text" ng-model="name" placehoder="Enter a name..."/>
-            <h1>{{name}}</h1>
+            <form ng-submit="add()">
+                <input type="text" ng-model="current.firstName" placehoder="Enter name..."/>
+                <input type="text" ng-model="current.lastName" placehoder="Enter last name..."/>
+                <input type="submit" value="Submit"/>
+            </form>
+            <ul>
+                <li ng-repeat="customer in customers">{{customer.firstName}}, {{customer.lastName}}</li>
+            </ul>
         </div>
         <script type="text/javascript" src="/bower_components/angularjs/angular.min.js"></script>
         <script type="text/javascript" src="/scripts/app.js"></script>
