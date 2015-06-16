@@ -1,22 +1,21 @@
 var app = angular.module('meanApp.services',[]);
 
-app.factory('customerService', function(){
+app.factory('customerService',['$http', function($http){
+        var list = [];
     
-        var list = [
-            { firstName : '1Jesú', lastName : 'Márquez' },
-            { firstName : 'Benjamín', lastName : 'Márquez' }
-            ];
-        
-        function add(customer)
-        {
+        function get(){
+            return $http.get('/scripts/customer/customer-data.json');
+        }
+
+        function add(customer){
             list.push(customer);
         }
         
         var customerSvc = {
-            list : list,
+            get : get,
             add : add
         };
         
         return customerSvc;
     }
-);
+]);
