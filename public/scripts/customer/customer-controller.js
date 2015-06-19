@@ -9,8 +9,8 @@ app.controller('customerController', ['$scope','$http', 'customerService',
         //     $scope.customers = data;
         // });
 
-        customerService.get().then(function(response){
-           $scope.customers = response.data; 
+        customerService.get().success(function(data){
+           $scope.customers = data; 
         });
 
         $scope.current = {};
