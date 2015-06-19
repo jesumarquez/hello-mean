@@ -1,14 +1,19 @@
 var app = angular.module('meanApp.services',[]);
 
-app.factory('customerService',['$http', function($http){
-        var list = [];
+app.factory('customerService',['$http','$resource', function($http, $resource){
+        var Customer = $resource('/api/customer');
     
         function get(){
-            return $http.get('/scripts/customer/customer-data.json');
+            return Customer;
         }
 
-        function add(customer){
-            list.push(customer);
+        function add(newCustomer){
+            var customer = new Customer();
+            customer.firstName = newCustomer.firstName;
+            customer.lastName = newCustomer.lastName;
+            customer.$save(function(response){
+                console.log(response);
+            });
         }
         
         var customerSvc = {

@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "angularjs": "~1.4.0"
+    "angularjs": "~1.4.0",
+    "angular-resource": "~1.4.1"
   }
 }

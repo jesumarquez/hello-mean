@@ -9,7 +9,7 @@ app.controller('customerController', ['$scope','$http', 'customerService',
         //     $scope.customers = data;
         // });
 
-        customerService.get().success(function(data){
+        customerService.get().query(function(data){
            $scope.customers = data; 
         });
 
