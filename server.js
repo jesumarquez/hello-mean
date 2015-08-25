@@ -9,7 +9,8 @@ app.use('/scripts', express.static(__dirname + '/public/scripts'));
 app.use(bodyParser());
 
 //mongose
-mongoose.connect('mongodb://MongoLabHigoDB:j2VCCXt1U4CLcGPECw1.fxJTp.Wr2IfdcD_l9SDsLys-@ds036698.mongolab.com:36698/MongoLabHigoDB');
+//mongoose.connect('mongodb://MongoLabHigoDB:j2VCCXt1U4CLcGPECw1.fxJTp.Wr2IfdcD_l9SDsLys-@ds036698.mongolab.com:36698/MongoLabHigoDB');
+mongoose.connect('mongodb://higo:Higo$2015@ds034208.mongolab.com:34208/mongolabtestdb');
 
 //Customer Model
 var Customer = mongoose.model('Customer', {
